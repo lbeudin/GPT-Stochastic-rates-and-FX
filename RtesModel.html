@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stochastic Interest Rate Models</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <label for="model">Select Rate Model: </label>
+        <select id="model">
+            <option value="vasicek">Vasicek</option>
+            <option value="cir">Cox-Ingersoll-Ross (CIR)</option>
+            <option value="dothan">Dothan</option>
+            <option value="bdt">Black-Derman-Toy</option>
+            <option value="holee">Ho-Lee</option>
+            <option value="hullwhite">Hull-White</option>
+        </select>
+    </div>
+
+    <div id="sliders">
+        <!-- Sliders for parameters will be dynamically generated here -->
+    </div>
+
+    <canvas id="rateChart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="RtesModel.js"></script>
+	</body>
+</html>
