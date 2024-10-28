@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FX Stochastic Models Visualization - Chat GPT </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #model-description, #model-formula {
+            margin: 20px 0;
+        }
+        .slider-container {
+            margin-bottom: 20px;
+        }
+        #chart {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FX Stochastic Models Visualization</h1>
+
+    <!-- Dropdown for Model Selection -->
+    <label for="model-select">Select FX Stochastic Model:</label>
+    <select id="model-select">
+        <option value="dupire">Local Volatility (Dupire Model)</option>
+        <option value="ecir">Extended CIR Model</option>
+        <option value="garch">GARCH Model</option>
+        <option value="sabr">SABR Model</option>
+        <option value="vg">Variance Gamma (VG) Model</option>
+        <option value="merton">Merton's Jump Diffusion Model</option>
+        <option value="bates">Bates Model (Heston + Jumps)</option>
+        <option value="cir">Cox-Ingersoll-Ross (CIR) Model</option>
+        <option value="heston">Heston Stochastic Volatility Model</option>
+    </select>
+
+    <!-- Section to display model formula -->
+    <div id="model-formula">
+        <h3>Formula:</h3>
+        <p id="formula-content">Select a model to see its formula</p>
+    </div>
+
+    <!-- Section to display model description -->
+    <div id="model-description">
+        <h3>Model Description and Parameters:</h3>
+        <p id="description-content">Select a model to see its description and parameters</p>
+    </div>
+
+    <!-- Sliders for adjusting parameters -->
+    <div id="slider-container"></div>
+
+    <!-- Chart for visualizing the model -->
+    <canvas id="chart"></canvas>
+
+    <!-- Include Chart.js for graphing -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="FXModel.js"></script>
+
+</body>
+</html>
